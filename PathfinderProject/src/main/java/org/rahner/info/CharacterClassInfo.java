@@ -352,13 +352,13 @@ public class CharacterClassInfo {
 				return 5;
 			} else if ((classLevel >= 1 && classLevel <= 15) && spellLevel == 6) {
 				return 0;
-			} else if (classLevel == 16 && spellLevel == 5) {
+			} else if (classLevel == 16 && spellLevel == 6) {
 				return 2;
-			} else if (classLevel == 17 && spellLevel == 5) {
+			} else if (classLevel == 17 && spellLevel == 6) {
 				return 3;
-			} else if ((classLevel >= 18 && classLevel <= 19) && spellLevel == 5) {
+			} else if ((classLevel >= 18 && classLevel <= 19) && spellLevel == 6) {
 				return 4;
-			} else if (classLevel == 20 && spellLevel == 5) {
+			} else if (classLevel == 20 && spellLevel == 6) {
 				return 5;
 			} else {
 				return 0;
@@ -520,13 +520,13 @@ public class CharacterClassInfo {
 				return 5;
 			} else if ((classLevel >= 1 && classLevel <= 15) && spellLevel == 6) {
 				return 0;
-			} else if (classLevel == 16 && spellLevel == 5) {
+			} else if (classLevel == 16 && spellLevel == 6) {
 				return 2;
-			} else if (classLevel == 17 && spellLevel == 5) {
+			} else if (classLevel == 17 && spellLevel == 6) {
 				return 3;
-			} else if ((classLevel >= 18 && classLevel <= 19) && spellLevel == 5) {
+			} else if ((classLevel >= 18 && classLevel <= 19) && spellLevel == 6) {
 				return 4;
-			} else if (classLevel == 20 && spellLevel == 5) {
+			} else if (classLevel == 20 && spellLevel == 6) {
 				return 5;
 			} else {
 				return 0;
@@ -592,8 +592,13 @@ public class CharacterClassInfo {
 				|| characterClass.equals("Barbarian")) {
 			return classLevel / 3;
 		} else if (characterClass.equals("Bard")) {
-			return (classLevel) - (classLevel - 3) / 2;
-			// TODO:Fix that
+
+			if (classLevel == 2) {
+				return 3;
+			} else {
+				return (classLevel) - (classLevel - 3) / 2;
+			}
+
 		} else {
 
 			return 0;
@@ -607,6 +612,8 @@ public class CharacterClassInfo {
 			return (classLevel + 4) / 2;
 		} else if (characterClass.equals("Fighter") || characterClass.equals("Barbarian")) {
 			return classLevel / 3;
+		} else if (characterClass.equals("Bard")) {
+			return getReflex();
 		} else {
 
 			return 0;
@@ -619,9 +626,29 @@ public class CharacterClassInfo {
 			return getReflex();
 		} else if (characterClass.equals("Fighter") || characterClass.equals("Barbarian")) {
 			return (classLevel / 2) + 2;
+		} else if (characterClass.equals("Bard")) {
+			return new CharacterClassInfo("Sorcerer", classLevel).getReflex();
 		} else {
 
 			return 0;
+		}
+	}
+
+	/**
+	 * This method returns the maximun spell level of this characterClass. If the
+	 * class is not able to cast spells, -1 is returned.
+	 * 
+	 * @return
+	 */
+
+	public int getMaxSpellLevel() {
+
+		if (characterClass.equals("Sorcerer")) {
+			return 9;
+		} else if (characterClass.equals("Bard")) {
+			return 6;
+		} else {
+			return -1;
 		}
 	}
 
@@ -630,7 +657,7 @@ public class CharacterClassInfo {
 		if (characterClass.equals("Sorcerer")) {
 
 			if (spellLevel == 0) {
-				return 0;
+				return 999;
 			}
 
 			if (classLevel == 1 && spellLevel == 1) {
@@ -654,6 +681,85 @@ public class CharacterClassInfo {
 			} else {
 				return 0;
 			}
+		} else if (characterClass.equals("Bard")) {
+
+			if (spellLevel == 0) {
+				return 999;
+			}
+
+			if (spellLevel == 1 && classLevel == 1) {
+				return 1;
+			} else if (spellLevel == 1 && classLevel == 2) {
+				return 2;
+			} else if (spellLevel == 1 && (classLevel <= 4 && classLevel > 2)) {
+				return 3;
+			} else if (spellLevel == 1 && (classLevel <= 8 && classLevel > 4)) {
+				return 4;
+			} else if (spellLevel == 1 && classLevel >= 9) {
+				return 5;
+			} else if (spellLevel == 2 && (classLevel >= 1 && classLevel < 4)) {
+				return 0;
+			} else if (spellLevel == 2 && classLevel == 4) {
+				return 1;
+			} else if (spellLevel == 2 && classLevel == 5) {
+				return 2;
+			} else if (spellLevel == 2 && (classLevel == 6 || classLevel == 7)) {
+				return 3;
+			} else if (spellLevel == 2 && (classLevel >= 8 && classLevel < 12)) {
+				return 4;
+			} else if (spellLevel == 2 && classLevel >= 12) {
+				return 5;
+			} else if (spellLevel == 3 && (classLevel >= 1 && classLevel < 7)) {
+				return 0;
+			} else if (spellLevel == 3 && classLevel == 7) {
+				return 1;
+			} else if (spellLevel == 3 && classLevel == 8) {
+				return 2;
+			} else if (spellLevel == 3 && (classLevel == 9 || classLevel == 10)) {
+				return 3;
+			} else if (spellLevel == 3 && (classLevel >= 11 && classLevel < 15)) {
+				return 4;
+			} else if (spellLevel == 3 && classLevel >= 15) {
+				return 5;
+			} else if (spellLevel == 4 && (classLevel >= 1 && classLevel < 10)) {
+				return 0;
+			} else if (spellLevel == 4 && classLevel == 10) {
+				return 1;
+			} else if (spellLevel == 4 && classLevel == 11) {
+				return 2;
+			} else if (spellLevel == 4 && (classLevel == 12 || classLevel == 13)) {
+				return 3;
+			} else if (spellLevel == 4 && (classLevel >= 14 && classLevel < 18)) {
+				return 4;
+			} else if (spellLevel == 4 && classLevel >= 18) {
+				return 5;
+			} else if (spellLevel == 5 && (classLevel >= 1 && classLevel < 13)) {
+				return 0;
+			} else if (spellLevel == 5 && classLevel == 13) {
+				return 1;
+			} else if (spellLevel == 5 && classLevel == 14) {
+				return 2;
+			} else if (spellLevel == 5 && (classLevel == 15 || classLevel == 16)) {
+				return 3;
+			} else if (spellLevel == 5 && (classLevel >= 17 && classLevel < 19)) {
+				return 4;
+			} else if (spellLevel == 5 && classLevel >= 19) {
+				return 5;
+			} else if (spellLevel == 6 && (classLevel >= 1 && classLevel < 16)) {
+				return 0;
+			} else if (spellLevel == 6 && classLevel == 16) {
+				return 1;
+			} else if (spellLevel == 6 && classLevel == 17) {
+				return 2;
+			} else if (spellLevel == 6 && classLevel == 18) {
+				return 3;
+			} else if (spellLevel == 6 && classLevel == 19) {
+				return 4;
+			} else if (spellLevel == 6 && classLevel == 20) {
+				return 5;
+			} else {
+				return 0;
+			}
 		} else {
 			return 0;
 		}
@@ -666,6 +772,8 @@ public class CharacterClassInfo {
 			return 2;
 		} else if (characterClass.equals("Barbarian")) {
 			return 4;
+		} else if (characterClass.equals("Bard")) {
+			return 6;
 		} else {
 			return 0;
 		}
@@ -702,7 +810,7 @@ public class CharacterClassInfo {
 	}
 
 	public String getPrimaryAttribute() {
-		if (characterClass.equals("Sorcerer")) {
+		if (characterClass.equals("Sorcerer") || characterClass.equals("Bard")) {
 			return Attributes.CHA.toString();
 		} else {
 			return null;
@@ -724,6 +832,10 @@ public class CharacterClassInfo {
 
 			DiceAndRollFactory diceAndRollFactory = new DiceAndRollFactory("3D6");
 			return diceAndRollFactory.rollAndSum() * 10;
+		} else if (characterClass.equals("Bard")) {
+
+			DiceAndRollFactory diceAndRollFactory = new DiceAndRollFactory("3D6");
+			return diceAndRollFactory.rollAndSum() * 10;
 		} else {
 			return 0;
 		}
@@ -734,7 +846,7 @@ public class CharacterClassInfo {
 			return 70;
 		} else if (characterClass.equals("Fighter")) {
 			return 175;
-		} else if (characterClass.equals("Barbarian")) {
+		} else if (characterClass.equals("Barbarian") || characterClass.equals("Bard")) {
 			return 105;
 		} else {
 			return 0;
