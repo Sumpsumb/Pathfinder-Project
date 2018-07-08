@@ -1,0 +1,270 @@
+body{
+    background-color:#dbd1a4;
+    margin-top: 0px;
+    font-family: Arial, Helverica, sans-serif;
+    font-size: 18px;
+}
+
+form{
+    margin-top: 50px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+p{
+    margin-top: 25px;
+}
+
+h2{
+	text-align: center;
+}
+
+.msg-box{
+	margin: 50 px;
+}
+
+.info{
+	background-color: green;
+}
+
+.warning{
+	background-color: yellow;
+}
+
+.error{
+	background-color: #e57272;
+}
+
+.error h2{
+	text-color: red;
+}
+
+.button{
+    color: #fff;
+    margin-top:  10x;
+    padding: 10px;
+    background-color: #d60c0c;
+    border-radius: 10px;
+    font-size: 18px;
+    border: 3px #f7e394 solid;
+}
+
+.button:hover{
+	cursor: pointer;
+	background-color: #e57272;
+}
+
+.login-box a:hover{
+	background-color: #e57272;
+}
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+#footer{
+	position: absolute;
+	top: 3000px;
+	text-align: center;
+	margin-top: 30px;
+	width: 100%;
+}
+
+#nav-img{
+    display: block;
+    margin: auto;
+}
+
+#nav-bar{
+    background-color: #000;
+    padding: 0px;
+    margin: 0px;
+    height: 50px;
+    text-align: center;
+}
+
+#nav-bar ul{
+    margin: 0px;
+    color: #fff;
+    float: left;
+    padding-left: 100px;
+    padding-top: 10px;
+}
+
+#nav-bar li{
+    display: inline;
+    border: 2px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 5px;
+}
+
+#nav-bar li:hover{
+    background-color: #204223;
+}
+
+#active a{
+    background-color: #204223;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.green-box{
+    width: 30%;
+    background-color: #204223;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 30px 20px;
+    border: 3px #f7e394 solid;
+    border-radius: 5px;
+}
+
+.index-box{
+	
+	margin: 200px 0px;
+	padding: 100px 50px;
+	width: 100%;
+}
+
+.index-box a{
+	display: block;
+	width: 100%;
+	margin: 50px 0px;
+}
+
+.index-box a:hover{
+	cursor: pointer;
+	background-color: #e57272;
+}
+
+.right {
+    float: right;
+}
+
+.register-form{
+    padding: 30px;
+    background-color: #123320;
+    color: white;
+    border: 3px #2f4d15 solid;
+    border-radius: 1em;
+}
+
+.form-gruppe{
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.form-gruppe label{
+    display: block;
+}
+
+.form-gruppe input{
+    width: 40%;
+    padding: 10px;
+}
+
+#reg-button input:hover{
+	cursor: pointer;
+	background-color: #e57272;
+}
+
+#log-button input:hover{
+	cursor: pointer;
+	background-color: #e57272;
+}
+
+.login-box{
+    margin-top: 20px;
+    text-align: right;
+}
+
+.login-box .button{
+    margin-top:  10x;
+    padding: 10px;
+    background-color: #d60c0c;
+    border-radius: 10px;
+}
+
+.form-gruppe select{
+	width: 40%;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px
+}
+
+.register-form p{
+    text-align: center;
+    font-size: 18px; 
+}
+
+.error-Msg{
+	color: #b72f22;
+}
+
+.Msg{
+	color: #00ff6c;
+}
+
+.green-box h2{
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+.green-box th{
+    padding: 5px 5px 5px 5px;
+}
+
+.button input:hover{
+	cursor: pointer;
+	background-color: #e57272;
+}
+
+.attribute-box{
+	background-color: #204223;
+	color: white;
+	float: left;
+	width: 40%;
+}
+
+.attribute-box li{
+	list-style-type: none;
+	
+}
+
+.attribute-box input{
+	float: left;
+	margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

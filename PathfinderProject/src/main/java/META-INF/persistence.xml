@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="PathfinderProject">
+		<class>entities.ArmorDetail</class>
+		<class>entities.Campaign</class>
+		<class>entities.Character</class>
+		<class>entities.CharacterCharacterClass</class>
+		<class>entities.CharacterClass</class>
+		<class>entities.CharacterItem</class>
+		<class>entities.CharacterLanguage</class>
+		<class>entities.CharacterSkill</class>
+		<class>entities.CharacterSpecialAbility</class>
+		<class>entities.CharacterSpell</class>
+		<class>entities.CharacterStatus</class>
+		<class>entities.CharacterTalent</class>
+		<class>entities.CharacterTransitionDetail</class>
+		<class>entities.CombatStat</class>
+		<class>entities.DailySpell</class>
+		<class>entities.Dungeon</class>
+		<class>entities.Group</class>
+		<class>entities.Item</class>
+		<class>entities.ItemReward</class>
+		<class>entities.Language</class>
+		<class>entities.Location</class>
+		<class>entities.Quest</class>
+		<class>entities.Race</class>
+		<class>entities.RaceLanguage</class>
+		<class>entities.Shop</class>
+		<class>entities.Skill</class>
+		<class>entities.SpecialAbility</class>
+		<class>entities.Spell</class>
+		<class>entities.Status</class>
+		<class>entities.Talent</class>
+		<class>entities.TalentCondition</class>
+		<class>entities.User</class>
+		<class>entities.UserCampaign</class>
+		<class>entities.UserCampaignRequest</class>
+		<class>entities.WeaponDetail</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+		    <property name="javax.persistence.jdbc.url"    value="jdbc:mysql://s134.goserver.host/web248_db1" />
+		    <property name="javax.persistence.jdbc.user" value="web248_1" />
+		    <property name="javax.persistence.jdbc.password" value="blutwurst77$!" />
+	    </properties>
+	</persistence-unit>
+</persistence>

@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color: black;
+	color: white;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+
+
+
+
+
+#nav-bar ul li{
+	display: inline-block;
+}
+
+#nav-bar ul li a{
+	background-color: red;
+	padding: 10px 0px;
+	margin: -2px;
+}
